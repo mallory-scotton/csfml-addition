@@ -43,3 +43,15 @@ sfBool sfSprite_isMouseHover(const sfRenderWindow *renderWindow, const sfSprite 
 
     return (sfFloatRect_contains(&bounds, (float)mouse.x, (float)mouse.y));
 }
+
+////////////////////////////////////////////////////////////
+sfBool sfAnimatedSprite_isMouseButtonPressed(const sfRenderWindow *renderWindow, const sfAnimatedSprite *animatedSprite, sfMouseButton mouseButton)
+{
+    return (sfSprite_isMouseButtonPressed(renderWindow, animatedSprite->sprite, mouseButton));
+}
+
+////////////////////////////////////////////////////////////
+sfBool sfAnimatedSprite_isMouseHover(const sfRenderWindow *renderWindow, const sfAnimatedSprite *animatedSprite)
+{
+    return (sfSprite_isMouseHover(renderWindow, animatedSprite->sprite));
+}

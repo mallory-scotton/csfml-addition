@@ -32,6 +32,7 @@
 #include <SFML/Graphics.h>
 #include <SFML/Window/Mouse.h>
 #include <SFML/Window/Keyboard.h>
+#include <SFML/Addition/AnimatedSprite.h>
 
 ////////////////////////////////////////////////////////////
 /// \brief Check if a mouse button is pressed on a sprite
@@ -41,7 +42,7 @@
 /// \param mouseButton  Button to check
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT sfBool sfSprite_isMouseButtonPressed(const sfRenderWindow *renderWindow, const sfSprite *sprite, sfMouseButton mouseButton);
+sfBool sfSprite_isMouseButtonPressed(const sfRenderWindow *renderWindow, const sfSprite *sprite, sfMouseButton mouseButton);
 
 ////////////////////////////////////////////////////////////
 /// \brief Check if the mouse is hover a sprite
@@ -50,6 +51,25 @@ CSFML_API_EXPORT sfBool sfSprite_isMouseButtonPressed(const sfRenderWindow *rend
 /// \param sprite       Sprite object
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT sfBool sfSprite_isMouseHover(const sfRenderWindow *renderWindow, const sfSprite *sprite);
+sfBool sfSprite_isMouseHover(const sfRenderWindow *renderWindow, const sfSprite *sprite);
+
+////////////////////////////////////////////////////////////
+/// \brief Check if a mouse button is pressed on an animated sprite
+///
+/// \param renderWindow     Render window object
+/// \param animatedSprite   Sprite object
+/// \param mouseButton      Button to check
+///
+////////////////////////////////////////////////////////////
+sfBool sfAnimatedSprite_isMouseButtonPressed(const sfRenderWindow *renderWindow, const sfAnimatedSprite *animatedSprite, sfMouseButton mouseButton);
+
+////////////////////////////////////////////////////////////
+/// \brief Check if the mouse is hover an animated sprite
+///
+/// \param renderWindow     Render window object
+/// \param animatedSprite   Animated sprite object
+///
+////////////////////////////////////////////////////////////
+sfBool sfAnimatedSprite_isMouseHover(const sfRenderWindow *renderWindow, const sfAnimatedSprite *animatedSprite);
 
 #endif // SFML_MOUSE_ADDITION_H
