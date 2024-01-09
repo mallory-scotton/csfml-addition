@@ -30,5 +30,6 @@
 ////////////////////////////////////////////////////////////
 #include <SFML/Addition/BezierCurve.h>
 #include <SFML/Addition/Mouse.h>
+#include <SFML/Addition/AnimatedSprite.h>
 
 #endif // SFML_ADDITION_H
