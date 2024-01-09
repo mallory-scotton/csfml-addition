@@ -91,6 +91,17 @@ sfVector2f sfBezierCurve_calculatePoint(const sfBezierCurve *bezierCurve, float 
 }
 
 ////////////////////////////////////////////////////////////
+void sfBezierCurve_move(sfBezierCurve *bezierCurve, sfVector2f offset)
+{
+    if (bezierCurve == NULL)
+        return;
+    for (size_t i = 0; i < bezierCurve->pointCount; i++) {
+        bezierCurve->points[i].x += offset.x;
+        bezierCurve->points[i].y += offset.y;
+    }
+}
+
+////////////////////////////////////////////////////////////
 void sfRenderWindow_drawBezierCurve(const sfRenderWindow *renderWindow, const sfBezierCurve *bezierCurve, const sfRenderStates *states)
 {
     sfVertexArray *curve = sfVertexArray_create();

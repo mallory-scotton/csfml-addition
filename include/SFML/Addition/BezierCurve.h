@@ -61,7 +61,7 @@ CSFML_API_EXPORT void sfBezierCurve_destroy(sfBezierCurve *bezierCurve);
 ///
 /// By default, the color is set to sfTransparent.
 ///
-/// \param bezierCurve  Bezier curve to object
+/// \param bezierCurve  Bezier curve object
 /// \param color        New color of the curve
 ///
 ////////////////////////////////////////////////////////////
@@ -70,7 +70,7 @@ CSFML_API_EXPORT void sfBezierCurve_setCurveColor(sfBezierCurve *bezierCurve, sf
 ////////////////////////////////////////////////////////////
 /// \brief Add a new point to the curve
 ///
-/// \param bezierCurve  Bezier curve to object
+/// \param bezierCurve  Bezier curve object
 /// \param point        New point of the curve
 ///
 ////////////////////////////////////////////////////////////
@@ -79,7 +79,7 @@ CSFML_API_EXPORT void sfBezierCurve_addPoint(sfBezierCurve *bezierCurve, sfVecto
 ////////////////////////////////////////////////////////////
 /// \brief Calculate current point based with time in percent from 0 to 1
 ///
-/// \param bezierCurve  Bezier curve to object
+/// \param bezierCurve  Bezier curve object
 /// \param time         Time from 0 to 1 for point offset
 ///
 ////////////////////////////////////////////////////////////
@@ -94,5 +94,14 @@ CSFML_API_EXPORT sfVector2f sfBezierCurve_calculatePoint(const sfBezierCurve *be
 ///
 ////////////////////////////////////////////////////////////
 CSFML_API_EXPORT void sfRenderWindow_drawBezierCurve(const sfRenderWindow *renderWindow, const sfBezierCurve *bezierCurve, const sfRenderStates *states);
+
+////////////////////////////////////////////////////////////
+/// \brief Move a bezier curve by a given offset
+///
+/// \param bezierCurve  Bezier curve object
+/// \param offset       Offset
+///
+////////////////////////////////////////////////////////////
+CSFML_API_EXPORT void sfBezierCurve_move(sfBezierCurve *bezierCurve, sfVector2f offset);
 
 #endif // SFML_BEZIERCURVE_H
