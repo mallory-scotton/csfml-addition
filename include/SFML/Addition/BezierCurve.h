@@ -46,7 +46,7 @@ typedef struct
 /// \brief Construct a new bezier curve
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT sfBezierCurve *sfBezierCurve_create(void);
+sfBezierCurve *sfBezierCurve_create(void);
 
 ////////////////////////////////////////////////////////////
 /// \brief Destroy an existing bezier curve
@@ -54,7 +54,7 @@ CSFML_API_EXPORT sfBezierCurve *sfBezierCurve_create(void);
 /// \param bezierCurve Bezier curve to destroy
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT void sfBezierCurve_destroy(sfBezierCurve *bezierCurve);
+void sfBezierCurve_destroy(sfBezierCurve *bezierCurve);
 
 ////////////////////////////////////////////////////////////
 /// \brief Set the color of the curve
@@ -65,7 +65,7 @@ CSFML_API_EXPORT void sfBezierCurve_destroy(sfBezierCurve *bezierCurve);
 /// \param color        New color of the curve
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT void sfBezierCurve_setCurveColor(sfBezierCurve *bezierCurve, sfColor color);
+void sfBezierCurve_setCurveColor(sfBezierCurve *bezierCurve, sfColor color);
 
 ////////////////////////////////////////////////////////////
 /// \brief Add a new point to the curve
@@ -74,7 +74,7 @@ CSFML_API_EXPORT void sfBezierCurve_setCurveColor(sfBezierCurve *bezierCurve, sf
 /// \param point        New point of the curve
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT void sfBezierCurve_addPoint(sfBezierCurve *bezierCurve, sfVector2f point);
+void sfBezierCurve_addPoint(sfBezierCurve *bezierCurve, sfVector2f point);
 
 ////////////////////////////////////////////////////////////
 /// \brief Calculate current point based with time in percent from 0 to 1
@@ -83,7 +83,7 @@ CSFML_API_EXPORT void sfBezierCurve_addPoint(sfBezierCurve *bezierCurve, sfVecto
 /// \param time         Time from 0 to 1 for point offset
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT sfVector2f sfBezierCurve_calculatePoint(const sfBezierCurve *bezierCurve, float time);
+sfVector2f sfBezierCurve_calculatePoint(const sfBezierCurve *bezierCurve, float time);
 
 ////////////////////////////////////////////////////////////
 /// \brief Draw a drawable object to the render-target
@@ -93,7 +93,7 @@ CSFML_API_EXPORT sfVector2f sfBezierCurve_calculatePoint(const sfBezierCurve *be
 /// \param states       Render states to use for drawing (NULL to use the default states)
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT void sfRenderWindow_drawBezierCurve(const sfRenderWindow *renderWindow, const sfBezierCurve *bezierCurve, const sfRenderStates *states);
+void sfRenderWindow_drawBezierCurve(const sfRenderWindow *renderWindow, const sfBezierCurve *bezierCurve, const sfRenderStates *states);
 
 ////////////////////////////////////////////////////////////
 /// \brief Move a bezier curve by a given offset
@@ -102,6 +102,6 @@ CSFML_API_EXPORT void sfRenderWindow_drawBezierCurve(const sfRenderWindow *rende
 /// \param offset       Offset
 ///
 ////////////////////////////////////////////////////////////
-CSFML_API_EXPORT void sfBezierCurve_move(sfBezierCurve *bezierCurve, sfVector2f offset);
+void sfBezierCurve_move(sfBezierCurve *bezierCurve, sfVector2f offset);
 
 #endif // SFML_BEZIERCURVE_H
