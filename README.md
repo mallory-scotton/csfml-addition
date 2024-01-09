@@ -14,7 +14,7 @@ for the C version of it.
 ## ⬇️ Download
 
 You can get the latest officiel release on [release](https://github.com/mallory-scotton/csfml-addition/releases).
-You can also get the current development version from the [Git repositery](https://github.com/mallory-scotton/csfml-addition).
+You can also get the current development version from the [Git repository](https://github.com/mallory-scotton/csfml-addition).
 
 ## 📚 Documentation
 
