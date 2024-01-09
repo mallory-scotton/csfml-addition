@@ -22,13 +22,24 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_ADDITION_H
-    #define SFML_ADDITION_H
-
 ////////////////////////////////////////////////////////////
 // Headers
 ////////////////////////////////////////////////////////////
-#include <SFML/Addition/BezierCurve.h>
 #include <SFML/Addition/Mouse.h>
 
-#endif // SFML_ADDITION_H
+////////////////////////////////////////////////////////////
+sfBool sfSprite_isMouseButtonPressed(const sfRenderWindow *renderWindow, const sfSprite *sprite, sfMouseButton mouseButton)
+{
+    if (!sfMouse_isButtonPressed(mouseButton))
+        return (sfFalse);
+    return (sfSprite_isMouseHover(renderWindow, sprite));
+}
+
+////////////////////////////////////////////////////////////
+sfBool sfSprite_isMouseHover(const sfRenderWindow *renderWindow, const sfSprite *sprite)
+{
+    sfVector2i mouse = sfMouse_getPositionRenderWindow(renderWindow);
+    sfFloatRect bounds = sfSprite_getGlobalBounds(sprite);
+
+    return (sfFloatRect_contains(&bounds, (float)mouse.x, (float)mouse.y));
+}

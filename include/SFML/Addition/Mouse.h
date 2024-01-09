@@ -22,13 +22,34 @@
 //
 ////////////////////////////////////////////////////////////
 
-#ifndef SFML_ADDITION_H
-    #define SFML_ADDITION_H
+#ifndef SFML_MOUSE_ADDITION_H
+    #define SFML_MOUSE_ADDITION_H
 
 ////////////////////////////////////////////////////////////
-// Headers
+// Header
 ////////////////////////////////////////////////////////////
-#include <SFML/Addition/BezierCurve.h>
-#include <SFML/Addition/Mouse.h>
+#include <SFML/Config.h>
+#include <SFML/Graphics.h>
+#include <SFML/Window/Mouse.h>
+#include <SFML/Window/Keyboard.h>
 
-#endif // SFML_ADDITION_H
+////////////////////////////////////////////////////////////
+/// \brief Check if a mouse button is pressed on a sprite
+///
+/// \param renderWindow Render window object
+/// \param sprite       Sprite object
+/// \param mouseButton  Button to check
+///
+////////////////////////////////////////////////////////////
+CSFML_API_EXPORT sfBool sfSprite_isMouseButtonPressed(const sfRenderWindow *renderWindow, const sfSprite *sprite, sfMouseButton mouseButton);
+
+////////////////////////////////////////////////////////////
+/// \brief Check if the mouse is hover a sprite
+///
+/// \param renderWindow Render window object
+/// \param sprite       Sprite object
+///
+////////////////////////////////////////////////////////////
+CSFML_API_EXPORT sfBool sfSprite_isMouseHover(const sfRenderWindow *renderWindow, const sfSprite *sprite);
+
+#endif // SFML_MOUSE_ADDITION_H
