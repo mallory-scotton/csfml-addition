@@ -67,6 +67,20 @@ sfAnimatedSprite *sfAnimatedSprite_createFromFile(const char *filename, const sf
     return (animatedSprite);
 }
 
+/////////////////////////////////////////////////////////////
+sfAnimatedSprite *sfAnimatedSprite_createFromAnimation(sfAnimation animation)
+{
+    sfAnimatedSprite *animatedSprite = sfAnimatedSprite_createFromFile(animation.texturePath, animation.area);
+
+    if (animatedSprite == NULL)
+        return (NULL);
+    animatedSprite->frameRate = animation.frameRate;
+    animatedSprite->frameSize = animation.frameSize;
+    animatedSprite->maxFrame = animation.maxFrame;
+    animatedSprite->gridSize = animatedSprite->gridSize;
+    return (animatedSprite);
+}
+
 ////////////////////////////////////////////////////////////
 void sfAnimatedSprite_destroy(sfAnimatedSprite *animatedSprite)
 {

@@ -24,6 +24,8 @@ typedef struct
   - _Create a new animated sprite_
 - `sfAnimatedSprite_createFromFile`:
   - _Create a new animated sprite from a file_
+- `sfAnimatedSprite_createFromAnimation`:
+  - _Create a new animated sprite from an animation_
 - `sfAnimatedSprite_destroy`:
   - _Destroy an existing animated sprite_
 - `sfAnimatedSprite_setPosition`:

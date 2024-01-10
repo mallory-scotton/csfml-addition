@@ -49,6 +49,20 @@ typedef struct
 } sfAnimatedSprite;
 
 ////////////////////////////////////////////////////////////
+/// \brief Utility class for manipulating animation
+///
+////////////////////////////////////////////////////////////
+typedef struct
+{
+    char *texturePath;
+    size_t maxFrame;
+    sfVector2u frameSize;
+    sfVector2u gridSize;
+    size_t frameRate;
+    sfIntRect *area;
+} sfAnimation;
+
+////////////////////////////////////////////////////////////
 /// \brief Create a new animated sprite
 ///
 ////////////////////////////////////////////////////////////
@@ -59,8 +73,17 @@ sfAnimatedSprite *sfAnimatedSprite_create(void);
 ///
 /// \param filename Path of the image file to load
 /// \param area     Area of the source image to load (NULL to load the entire image)
+///
 ////////////////////////////////////////////////////////////
 sfAnimatedSprite *sfAnimatedSprite_createFromFile(const char *filename, const sfIntRect *area);
+
+////////////////////////////////////////////////////////////
+/// \brief Create a new animated sprite from an animation
+///
+/// \param animation    The animation rules for the sprite
+///
+////////////////////////////////////////////////////////////
+sfAnimatedSprite *sfAnimatedSprite_createFromAnimation(sfAnimation animation);
 
 ////////////////////////////////////////////////////////////
 /// \brief Destroy an existing animated sprite
