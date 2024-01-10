@@ -7,6 +7,8 @@ It provides access to windowing, graphics, audio and network.
 It is originally written in C++, an this project is its unofficial addition
 for the C version of it.
 
+CSFML Addition is an Addon library that add multiple useful new class and functions to make CSFML easier and faster.
+
 ## 👷 Authors
 
 * Mallory Scotton - main developper ([@mallory-scotton](https://github.com/mallory-scotton))
@@ -18,7 +20,12 @@ You can also get the current development version from the [Git repository](https
 
 ## 📚 Documentation
 
-TODO
+* Bezier Curve ([sfBezierCurve](https://github.com/mallory-scotton/csfml-addition/blob/main/doc/BezierCurve.md))
+  - _Create Bezier Curve with an infinite amount of point._
+* Animated Sprite ([sfAnimatedSprite](https://github.com/mallory-scotton/csfml-addition/blob/main/doc/AnimatedSprite.md))
+  - _Create animated sprite easily._
+* Mouse event ([Mouse Event](https://github.com/mallory-scotton/csfml-addition/blob/main/doc/MouseEvents.md))
+  - _New prebuild mouse events._
 
 ## 🎨 Learn
 
